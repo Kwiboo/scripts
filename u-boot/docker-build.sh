@@ -10,6 +10,15 @@ fi
 if [ -f u-boot-rockchip-spi.bin ]; then
 	rm u-boot-rockchip-spi.bin
 fi
+if [ -f tpl/u-boot-tpl.dtb ]; then
+	rm tpl/u-boot-tpl.dtb
+fi
+if [ -f spl/u-boot-spl.dtb ]; then
+	rm spl/u-boot-spl.dtb
+fi
+if [ -f u-boot.dtb ]; then
+	rm u-boot.dtb
+fi
 
 docker run --rm --log-driver none --init -u ubuntu -h builder -v $HOME:$HOME -w `pwd` -it u-boot-builder ./build.sh "${1:-mrproper}" ${2}
 
@@ -38,4 +47,12 @@ if [ -f u-boot-rockchip.bin ]; then
 	dd if=uefi.img of=boot.img bs=1M seek=16 conv=fsync,notrunc
 	dd if=u-boot-rockchip.bin of=boot.img bs=32k seek=1 conv=fsync,notrunc
 	gzip boot.img -f
+fi
+
+if [ -f tpl/u-boot-tpl.dtb -a -f spl/u-boot-spl.dtb -a -f u-boot.dtb ]; then
+	python3 checkdtb.py --tpl tpl/u-boot-tpl.dtb --spl spl/u-boot-spl.dtb u-boot.dtb
+elif [ -f spl/u-boot-spl.dtb -a -f u-boot.dtb ]; then
+	python3 checkdtb.py --spl spl/u-boot-spl.dtb u-boot.dtb
+elif [ -f u-boot.dtb ]; then
+	python3 checkdtb.py u-boot.dtb
 fi
