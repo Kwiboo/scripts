@@ -133,24 +133,24 @@ if __name__ == '__main__':
     print('MODEL: %s%s%s' % (UNDERLINE, all_rootnode['model'].strings[0], END))
     print('COMPATIBLE: %s' % (', '.join(all_rootnode['compatible'].strings)))
 
-    clk_compatibles = ['fixed-clock','rockchip,rk3288-cru','rockchip,rk3308-cru','rockchip,rk3328-cru','rockchip,rk3399-cru','rockchip,rk3399-pmucru']
-    pinctrl_compatibles = ['rockchip,rk3288-pinctrl','rockchip,rk3308-pinctrl','rockchip,rk3328-pinctrl','rockchip,rk3399-pinctrl','rockchip,rk3568-pinctrl','rockchip,rk3588-pinctrl']
+    clk_compatibles = ['fixed-clock','rockchip,rk3288-cru','rockchip,rk3308-cru','rockchip,rk3328-cru','rockchip,rk3399-cru','rockchip,rk3399-pmucru','rockchip,rk3528-cru','rockchip,rk3568-cru','rockchip,rk3576-cru','rockchip,rk3588-cru']
+    pinctrl_compatibles = ['rockchip,rk3288-pinctrl','rockchip,rk3308-pinctrl','rockchip,rk3328-pinctrl','rockchip,rk3399-pinctrl','rockchip,rk3528-pinctrl','rockchip,rk3568-pinctrl','rockchip,rk3576-pinctrl','rockchip,rk3588-pinctrl']
     rk8xx_compatibles = ['rockchip,rk805','rockchip,rk806','rockchip,rk808','rockchip,rk809','rockchip,rk816','rockchip,rk817','rockchip,rk818']
-    dwmmc_compatibles = ['rockchip,rk3288-dw-mshc']
-    sdhci_compatibles = ['rockchip,rk3399-sdhci-5.1','rockchip,rk3568-dwcmshc','rockchip,rk3588-dwcmshc']
+    dwmmc_compatibles = ['rockchip,rk3288-dw-mshc','rockchip,rk3576-dw-mshc']
+    sdhci_compatibles = ['rockchip,rk3399-sdhci-5.1','rockchip,rk3528-dwcmshc','rockchip,rk3568-dwcmshc','rockchip,rk3576-dwcmshc','rockchip,rk3588-dwcmshc']
     spi_flash_compatibles = ['jedec,spi-nor']
     spi_compatibles = ['rockchip,rk3066-spi','rockchip,rk3288-spi','rockchip,rk3328-spi','rockchip,rk3368-spi','rockchip,rk3399-spi']
     sfc_compatibles = ['rockchip,sfc']
     gmac_compatibles = ['rockchip,rk3288-gmac','rockchip,rk3328-gmac','rockchip,rk3399-gmac']
     gmac_100_compatibles = ['rockchip,rk3308-gmac']
-    gmac_qos_compatibles = ['rockchip,rk3568-gmac','rockchip,rk3588-gmac']
+    gmac_qos_compatibles = ['rockchip,rk3568-gmac','rockchip,rk3576-gmac','rockchip,rk3588-gmac']
     net_compatibles = gmac_compatibles + gmac_100_compatibles + gmac_qos_compatibles
     pcie_compatibles = ['rockchip,rk3399-pcie','rockchip,rk3568-pcie']
     iodomain_compatibles = ['rockchip,rk3288-io-voltage-domain','rockchip,rk3308-io-voltage-domain','rockchip,rk3328-io-voltage-domain','rockchip,rk3399-io-voltage-domain', 'rockchip,rk3399-pmu-io-voltage-domain','rockchip,rk3568-pmu-io-voltage-domain']
     dwc3_compatibles = ['rockchip,rk3328-dwc3','rockchip,rk3399-dwc3','rockchip,rk3568-dwc3','rockchip,rk3588-dwc3']
-    rng_compatibles = ['rockchip,rk3288-crypto','rockchip,rk3328-crypto','rockchip,rk3399-crypto','rockchip,cryptov2-rng','rockchip,trngv1']
+    rng_compatibles = ['rockchip,rk3288-crypto','rockchip,rk3328-crypto','rockchip,rk3399-crypto','rockchip,cryptov2-rng','rockchip,trngv1','rockchip,rkrng']
     efuse_compatibles = ['rockchip,rk3036-efuse','rockchip,rk3066a-efuse','rockchip,rk3128-efuse','rockchip,rk3188-efuse','rockchip,rk3228-efuse','rockchip,rk3288-efuse','rockchip,rk3328-efuse','rockchip,rk3399-efuse']
-    otp_compatibles = ['rockchip,px30-otp','rockchip,rk3308-otp','rockchip,rk3568-otp','rockchip,rk3588-otp','rockchip,rv1126-otp']
+    otp_compatibles = ['rockchip,px30-otp','rockchip,rk3308-otp','rockchip,rk3528-otp','rockchip,rk3568-otp','rockchip,rk3576-otp','rockchip,rk3588-otp','rockchip,rv1126-otp']
     regulators_compatibles = ['pwm-regulator','regulator-fixed'] + rk8xx_compatibles
     misc_drivers_compatibles = iodomain_compatibles + efuse_compatibles + otp_compatibles + ['google,cros-ec-spi','google,cros-ec-i2c']
     saradc_compatibles = ['rockchip,saradc','rockchip,rk3066-tsadc','rockchip,rk3399-saradc','rockchip,rk3588-saradc']
