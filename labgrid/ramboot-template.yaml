@@ -1,0 +1,16 @@
+targets:
+  main:
+    resources:
+      RemotePlace:
+        name: !template $LG_PLACE
+    drivers:
+      SerialDriver: {}
+      LinkPiSmartHUBPowerDriver: {}
+      RKUSBMaskromDriver:
+        initial: rkmaskrom471
+        image: rkmaskrom472
+      BootstrapStrategy: {}
+
+images:
+  rkmaskrom471: /srv/u-boot/$LG_PLACE/u-boot-rockchip-usb471.bin
+  rkmaskrom472: /srv/u-boot/$LG_PLACE/u-boot-rockchip-usb472.bin
