@@ -18,7 +18,7 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN apt-get update && apt-get install -y \
     build-essential crossbuild-essential-arm64 crossbuild-essential-armhf gcc-arm-none-eabi \
     bison flex swig libssl-dev python3-dev python3-setuptools python3-pyelftools bc confget uuid-dev libgnutls28-dev \
-    python3-cryptography openssl python3-asteval device-tree-compiler \
+    python3-cryptography openssl python3-asteval device-tree-compiler git \
     --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
 
