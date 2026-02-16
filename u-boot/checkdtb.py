@@ -133,27 +133,27 @@ if __name__ == '__main__':
     print('MODEL: %s%s%s' % (UNDERLINE, all_rootnode['model'].strings[0], END))
     print('COMPATIBLE: %s' % (', '.join(all_rootnode['compatible'].strings)))
 
-    clk_compatibles = ['fixed-clock','rockchip,rk3288-cru','rockchip,rk3308-cru','rockchip,rk3328-cru','rockchip,rk3399-cru','rockchip,rk3399-pmucru','rockchip,rk3528-cru','rockchip,rk3568-cru','rockchip,rk3576-cru','rockchip,rk3588-cru']
-    pinctrl_compatibles = ['rockchip,rk3288-pinctrl','rockchip,rk3308-pinctrl','rockchip,rk3328-pinctrl','rockchip,rk3399-pinctrl','rockchip,rk3528-pinctrl','rockchip,rk3568-pinctrl','rockchip,rk3576-pinctrl','rockchip,rk3588-pinctrl']
+    clk_compatibles = ['fixed-clock','rockchip,px30-cru','rockchip,px30-pmucru','rockchip,rk3228-cru','rockchip,rk3288-cru','rockchip,rk3308-cru','rockchip,rk3328-cru','rockchip,rk3399-cru','rockchip,rk3399-pmucru','rockchip,rk3506-cru','rockchip,rk3528-cru','rockchip,rk3562-cru','rockchip,rk3568-cru','rockchip,rk3576-cru','rockchip,rk3588-cru','rockchip,rv1103b-cru','rockchip,rv1106-cru','rockchip,rv1126b-cru']
+    pinctrl_compatibles = ['rockchip,px30-pinctrl','rockchip,rk3228-pinctrl','rockchip,rk3288-pinctrl','rockchip,rk3308-pinctrl','rockchip,rk3328-pinctrl','rockchip,rk3399-pinctrl','rockchip,rk3506-pinctrl','rockchip,rk3528-pinctrl','rockchip,rk3562-pinctrl','rockchip,rk3568-pinctrl','rockchip,rk3576-pinctrl','rockchip,rk3588-pinctrl','rockchip,rv1103b-pinctrl','rockchip,rv1106-pinctrl','rockchip,rv1126b-pinctrl']
     rk8xx_compatibles = ['rockchip,rk805','rockchip,rk806','rockchip,rk808','rockchip,rk809','rockchip,rk816','rockchip,rk817','rockchip,rk818']
     dwmmc_compatibles = ['rockchip,rk3288-dw-mshc','rockchip,rk3576-dw-mshc']
-    sdhci_compatibles = ['rockchip,rk3399-sdhci-5.1','rockchip,rk3528-dwcmshc','rockchip,rk3568-dwcmshc','rockchip,rk3576-dwcmshc','rockchip,rk3588-dwcmshc']
+    sdhci_compatibles = ['rockchip,rk3399-sdhci-5.1','rockchip,rk3506-dwcmshc','rockchip,rk3528-dwcmshc','rockchip,rk3562-dwcmshc','rockchip,rk3568-dwcmshc','rockchip,rk3576-dwcmshc','rockchip,rk3588-dwcmshc']
     spi_flash_compatibles = ['jedec,spi-nor']
     spi_compatibles = ['rockchip,rk3066-spi','rockchip,rk3288-spi','rockchip,rk3328-spi','rockchip,rk3368-spi','rockchip,rk3399-spi']
     sfc_compatibles = ['rockchip,sfc']
-    gmac_compatibles = ['rockchip,rk3288-gmac','rockchip,rk3328-gmac','rockchip,rk3399-gmac']
+    gmac_compatibles = ['rockchip,px30-gmac','rockchip,rk3228-gmac','rockchip,rk3288-gmac','rockchip,rk3328-gmac','rockchip,rk3399-gmac']
     gmac_100_compatibles = ['rockchip,rk3308-gmac']
-    gmac_qos_compatibles = ['rockchip,rk3568-gmac','rockchip,rk3576-gmac','rockchip,rk3588-gmac']
+    gmac_qos_compatibles = ['rockchip,rk3506-gmac','rockchip,rk3528-gmac','rockchip,rk3562-gmac','rockchip,rk3568-gmac','rockchip,rk3576-gmac','rockchip,rk3588-gmac','rockchip,rv1103b-gmac','rockchip,rv1106-gmac','rockchip,rv1126b-gmac']
     net_compatibles = gmac_compatibles + gmac_100_compatibles + gmac_qos_compatibles
     pcie_compatibles = ['rockchip,rk3399-pcie','rockchip,rk3568-pcie']
-    iodomain_compatibles = ['rockchip,rk3288-io-voltage-domain','rockchip,rk3308-io-voltage-domain','rockchip,rk3328-io-voltage-domain','rockchip,rk3399-io-voltage-domain', 'rockchip,rk3399-pmu-io-voltage-domain','rockchip,rk3568-pmu-io-voltage-domain']
-    dwc3_compatibles = ['rockchip,rk3328-dwc3','rockchip,rk3399-dwc3','rockchip,rk3568-dwc3','rockchip,rk3588-dwc3']
-    rng_compatibles = ['rockchip,rk3288-crypto','rockchip,rk3328-crypto','rockchip,rk3399-crypto','rockchip,cryptov2-rng','rockchip,trngv1','rockchip,rkrng']
+    iodomain_compatibles = ['rockchip,px30-io-voltage-domain','rockchip,px30-pmu-io-voltage-domain','rockchip,rk3288-io-voltage-domain','rockchip,rk3308-io-voltage-domain','rockchip,rk3328-io-voltage-domain','rockchip,rk3399-io-voltage-domain', 'rockchip,rk3399-pmu-io-voltage-domain','rockchip,rk3568-pmu-io-voltage-domain']
+    dwc3_compatibles = ['rockchip,rk3328-dwc3','rockchip,rk3399-dwc3','rockchip,rk3528-dwc3','rockchip,rk3562-dwc3','rockchip,rk3568-dwc3','rockchip,rk3576-dwc3','rockchip,rk3588-dwc3','rockchip,rv1103b-dwc3','rockchip,rv1106-dwc3','rockchip,rv1126b-dwc3']
+    rng_compatibles = ['rockchip,rk3288-crypto','rockchip,rk3328-crypto','rockchip,rk3399-crypto','rockchip,rk3568-rng','rockchip,rk3576-rng','rockchip,rk3588-rng','rockchip,cryptov2-rng','rockchip,trngv1','rockchip,rkrng']
     efuse_compatibles = ['rockchip,rk3036-efuse','rockchip,rk3066a-efuse','rockchip,rk3128-efuse','rockchip,rk3188-efuse','rockchip,rk3228-efuse','rockchip,rk3288-efuse','rockchip,rk3328-efuse','rockchip,rk3399-efuse']
-    otp_compatibles = ['rockchip,px30-otp','rockchip,rk3308-otp','rockchip,rk3528-otp','rockchip,rk3568-otp','rockchip,rk3576-otp','rockchip,rk3588-otp','rockchip,rv1126-otp']
-    regulators_compatibles = ['pwm-regulator','regulator-fixed'] + rk8xx_compatibles
+    otp_compatibles = ['rockchip,px30-otp','rockchip,rk3308-otp','rockchip,rk3506-otp','rockchip,rk3528-otp','rockchip,rk3562-otp','rockchip,rk3568-otp','rockchip,rk3576-otp','rockchip,rk3588-otp','rockchip,rv1103b-otp','rockchip,rv1106-otp','rockchip,rv1126-otp','rockchip,rv1126b-otp']
+    regulators_compatibles = ['pwm-regulator','regulator-fixed','regulator-gpio'] + rk8xx_compatibles
     misc_drivers_compatibles = iodomain_compatibles + efuse_compatibles + otp_compatibles + ['google,cros-ec-spi','google,cros-ec-i2c']
-    saradc_compatibles = ['rockchip,saradc','rockchip,rk3066-tsadc','rockchip,rk3399-saradc','rockchip,rk3588-saradc']
+    saradc_compatibles = ['rockchip,saradc','rockchip,rk3066-tsadc','rockchip,rk3399-saradc','rockchip,rk3506-saradc','rockchip,rk3528-saradc','rockchip,rk3562-saradc','rockchip,rk3588-saradc','rockchip,rv1103b-saradc','rockchip,rv1106-saradc','rockchip,rv1126b-saradc']
     gadget_compatibles = ['dr_mode=otg', 'dr_mode=peripheral']
 
     if args.tpl and 'CONFIG_TPL=y' in all_lines:
@@ -230,6 +230,7 @@ if __name__ == '__main__':
         spl_compatible_configs = {
             'CONFIG_SPL_CLK': set(clk_compatibles),
             'CONFIG_SPL_DM_GPIO': set(['rockchip,gpio-bank']),
+            'CONFIG_SPL_DM_REGULATOR': set(regulators_compatibles),
             'CONFIG_SPL_DM_REGULATOR_GPIO': set(['regulator-gpio']),
             'CONFIG_SPL_DM_REGULATOR_FIXED': set(['regulator-fixed']),
             'CONFIG_SPL_DM_SERIAL': set(['snps,dw-apb-uart']),
@@ -238,6 +239,7 @@ if __name__ == '__main__':
             'CONFIG_SPL_MMC': set(dwmmc_compatibles + sdhci_compatibles),
             'CONFIG_SPL_PINCTRL_ROCKCHIP': set(pinctrl_compatibles),
             'CONFIG_SPL_PINCTRL': set(pinctrl_compatibles),
+            'CONFIG_SPL_POWER': set(regulators_compatibles),
             'CONFIG_SPL_PMIC_RK8XX': set(rk8xx_compatibles),
             'CONFIG_SPL_REGMAP': set(['syscon']),
             'CONFIG_SPL_SPI': set(spi_flash_compatibles),
@@ -257,7 +259,7 @@ if __name__ == '__main__':
         'CONFIG_OF_LIBFDT_OVERLAY=y',
         'CONFIG_MISC_INIT_R=y',
         'CONFIG_SYS_NS16550_MEM32=y',
-        'CONFIG_SYS_RELOC_GD_ENV_ADDR=y',
+        'CONFIG_ENV_RELOC_GD_ENV_ADDR=y',
         #'CONFIG_SYSINFO=y',
         'CONFIG_SERIAL=y',
     ]
@@ -313,12 +315,12 @@ if __name__ == '__main__':
         'CONFIG_PCIE_DW_ROCKCHIP': set(['rockchip,rk3568-pcie']),
         'CONFIG_PCIE_ROCKCHIP': set(['rockchip,rk3399-pcie']),
         'CONFIG_PHY_GIGE': set(gmac_compatibles + gmac_qos_compatibles),
-        'CONFIG_PHY_ROCKCHIP_INNO_USB2': set(['rockchip,rk3308-usb2phy','rockchip,rk3328-usb2phy','rockchip,rk3399-usb2phy','rockchip,rk3568-usb2phy','rockchip,rk3588-usb2phy']),
-        'CONFIG_PHY_ROCKCHIP_NANENG_COMBOPHY': set(['rockchip,rk3568-naneng-combphy','rockchip,rk3588-naneng-combphy']),
+        'CONFIG_PHY_ROCKCHIP_INNO_USB2': set(['rockchip,rk3228-usb2phy','rockchip,rk3308-usb2phy','rockchip,rk3328-usb2phy','rockchip,rk3399-usb2phy','rockchip,rk3506-usb2phy','rockchip,rk3528-usb2phy','rockchip,rk3568-usb2phy','rockchip,rk3576-usb2phy','rockchip,rk3588-usb2phy','rockchip,rv1106-usb2phy','rockchip,rv1126b-usb2phy']),
+        'CONFIG_PHY_ROCKCHIP_NANENG_COMBOPHY': set(['rockchip,rk3528-naneng-combphy','rockchip,rk3568-naneng-combphy','rockchip,rk3576-naneng-combphy','rockchip,rk3588-naneng-combphy']),
         'CONFIG_PHY_ROCKCHIP_PCIE': set(['rockchip,rk3399-pcie-phy']),
         'CONFIG_PHY_ROCKCHIP_SNPS_PCIE3': set(['rockchip,rk3568-pcie3-phy','rockchip,rk3588-pcie3-phy']),
         'CONFIG_PHY_ROCKCHIP_TYPEC': set(['rockchip,rk3399-typec-phy']),
-        'CONFIG_PHY_ROCKCHIP_USBDP': set(['rockchip,rk3588-usbdp-phy']),
+        'CONFIG_PHY_ROCKCHIP_USBDP': set(['rockchip,rk3576-usbdp-phy','rockchip,rk3588-usbdp-phy']),
         'CONFIG_PMIC_RK8XX': set(rk8xx_compatibles),
         'CONFIG_REGULATOR_PWM': set(['pwm-regulator']),
         'CONFIG_REGULATOR_RK8XX': set(rk8xx_compatibles),
@@ -329,7 +331,7 @@ if __name__ == '__main__':
         'CONFIG_ROCKCHIP_OTP': set(otp_compatibles),
         'CONFIG_ROCKCHIP_SFC': set(sfc_compatibles),
         'CONFIG_ROCKCHIP_SPI': set(spi_compatibles),
-        'CONFIG_PWM_ROCKCHIP': set(['rockchip,rk2928-pwm', 'rockchip,rk3288-pwm', 'rockchip,rk3328-pwm']),
+        'CONFIG_PWM_ROCKCHIP': set(['rockchip,rk2928-pwm', 'rockchip,rk3288-pwm', 'rockchip,rk3328-pwm', 'rockchip,rk3528-pwm']),
         'CONFIG_SARADC_ROCKCHIP': set(saradc_compatibles),
         'CONFIG_SPI_FLASH_SFDP_SUPPORT': set(spi_flash_compatibles),
         'CONFIG_USB_DWC3_GENERIC': set(dwc3_compatibles),
@@ -361,6 +363,7 @@ if __name__ == '__main__':
     if 'CONFIG_LED=y' in all_lines:
         proper_compatible_configs.update({
             'CONFIG_LED_GPIO': set(['gpio-leds']),
+            'CONFIG_LED_PWM': set(['pwm-leds']),
         })
     if 'CONFIG_USB_KEYBOARD=y' in all_lines and 'CONFIG_DISPLAY=y' in all_lines:
         proper_compatible_configs.update({
