@@ -1,0 +1,14 @@
+targets:
+  main:
+    resources:
+      RemotePlace:
+        name: !template $LG_PLACE
+    drivers:
+      SerialDriver: {}
+      LinkPiSmartHUBPowerDriver: {}
+      RKUSBMaskromDriver:
+        image: rkloader
+      BootstrapStrategy: {}
+
+images:
+  rkloader: /srv/u-boot/$LG_PLACE/u-boot-rockchip-loader.bin

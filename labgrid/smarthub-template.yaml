@@ -1,0 +1,9 @@
+targets:
+  main:
+    resources:
+      RemotePlace:
+        name: !template $LG_PLACE
+    drivers:
+      SerialDriver: {}
+      LinkPiSmartHUBPowerDriver: {}
+      PowerStrategy: {}
