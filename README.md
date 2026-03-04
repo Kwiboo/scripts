@@ -4,7 +4,8 @@
 
 ```
 LABGRID_PATH=/home/labgrid
-mkdir -p $LABGRID_PATH
+sudo mkdir -p $LABGRID_PATH
+sudo chown $USER: $LABGRID_PATH
 pushd $LABGRID_PATH
 python3 -m venv .
 bin/pip install git+https://github.com/Kwiboo/labgrid.git@rockchip --upgrade --upgrade-strategy eager
@@ -25,6 +26,12 @@ pushd ~/.local/share/bash-completion/completions
 ln -s ~/scripts/bash-completion/labgrid.sh
 ln -s ~/scripts/bash-completion/u-boot.sh
 popd
+```
+
+### packages
+
+```
+sudo apt install confget mtools
 ```
 
 ### u-boot
