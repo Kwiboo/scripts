@@ -1,4 +1,4 @@
-rk3506b-lyra-zero:
+rk3506b-lyra-zero-w:
   RawSerialPort:
     speed: 1500000
     port: '/dev/serial/by-path/pci-0000:00:14.0-usb-0:4.3.2:1.0-port0'
