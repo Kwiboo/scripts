@@ -1,0 +1,9 @@
+default linux
+timeout 15
+prompt 1
+
+label linux
+	kernel /armhf/zImage
+	initrd /armhf/initramfs.cpio.gz
+	fdtdir /armhf/
+	append earlycon ip=dhcp

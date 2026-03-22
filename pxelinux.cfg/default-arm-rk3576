@@ -1,0 +1,14 @@
+default linux
+timeout 15
+prompt 1
+
+label linux
+	kernel /arm64/Image.gz
+	initrd /arm64/initramfs.cpio.gz
+	fdtdir /arm64/
+	append earlycon ip=dhcp
+
+label ubuntu
+	kernel /arm64/Image.gz
+	fdtdir /arm64/
+	append earlycon ip=dhcp rdinit=/sbin/init systemd.getty_auto=no systemd.debug-shell=ttyS0 root=LABEL=rootfs rw
