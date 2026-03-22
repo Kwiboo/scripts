@@ -1,95 +1,160 @@
-rk3588-rock-5b:
+rk3399-rock-pi-4:
   RawSerialPort:
     speed: 1500000
     port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:3.3.2:1.0-port0'
   LinkPiSmartHUBPowerPort:
     match:
       ID_SERIAL_SHORT: 'A10PHAU6'
-    index: 5
+    index: '1'
   RKUSBLoader:
     match:
-      ID_MODEL_ID: '350b'
-      ID_PATH: 'pci-0000:00:15.0-usb-0:3.2.4'
+      ID_MODEL_ID: '330c'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:3.2.1'
 
-rk3568-rock-3b:
+rk3588-rock-5b:
   RawSerialPort:
     speed: 1500000
     port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:3.3.2:1.0-port1'
   LinkPiSmartHUBPowerPort:
     match:
-      ID_SERIAL_SHORT: 'A10PHA5S'
-    index: 5
+      ID_SERIAL_SHORT: 'A10PHAU6'
+    index: '2'
   RKUSBLoader:
     match:
-      ID_MODEL_ID: '350a'
-      ID_PATH: 'pci-0000:00:15.0-usb-0:4.3.1'
+      ID_MODEL_ID: '350b'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:3.2.3'
 
-rk3568-rock-3a:
+rk3568-rock-3b:
   RawSerialPort:
     speed: 1500000
     port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:3.3.2:1.0-port2'
   LinkPiSmartHUBPowerPort:
     match:
       ID_SERIAL_SHORT: 'A10PHAU6'
-    index: 4
+    index: '3'
   RKUSBLoader:
     match:
       ID_MODEL_ID: '350a'
-      ID_PATH: 'pci-0000:00:15.0-usb-0:4.1.1'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:3.1.2'
 
-rk3528-rock-2f:
+rk3588s-rock-5c:
   RawSerialPort:
     speed: 1500000
     port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:3.3.2:1.0-port3'
   LinkPiSmartHUBPowerPort:
     match:
-      ID_SERIAL_SHORT: 'A10PHA5S'
-    index: 4
+      ID_SERIAL_SHORT: 'A10PHAU6'
+    index: '4'
   RKUSBLoader:
     match:
-      ID_MODEL_ID: '350c'
-      ID_PATH: 'pci-0000:00:15.0-usb-0:4.2.3'
+      ID_MODEL_ID: '350b'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:3.1.1'
 
-rk3506j-forge1:
+rk3506b-lyra-pi:
+  RawSerialPort:
+    speed: 1500000
+    port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:3.3.2:1.0-port4'
+  LinkPiSmartHUBPowerPort:
+    match:
+      ID_SERIAL_SHORT: 'A10PHAU6'
+    index: '5'
+  RKUSBLoader:
+    match:
+      ID_MODEL_ID: '350f'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:3.3.4'
+
+rk3288-tinker-s:
+  RawSerialPort:
+    speed: 115200
+    port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:3.3.2:1.0-port5'
+  LinkPiSmartHUBPowerPort:
+    match:
+      ID_SERIAL_SHORT: 'A10PHAU6'
+    index: '6'
+  RKUSBLoader:
+    match:
+      ID_MODEL_ID: '320a'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:3.3.3'
+
+rk3588-rock-5bp:
+  RawSerialPort:
+    speed: 1500000
+    port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:4.3.2:1.0-port0'
+  LinkPiSmartHUBPowerPort:
+    match:
+      ID_SERIAL_SHORT: 'A10PHA5S'
+    index: '1'
+  RKUSBLoader:
+    match:
+      ID_MODEL_ID: '350b'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:4.2.1'
+
+rk3568-rock-3a:
   RawSerialPort:
     speed: 1500000
     port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:4.3.2:1.0-port1'
   LinkPiSmartHUBPowerPort:
     match:
       ID_SERIAL_SHORT: 'A10PHA5S'
-    index: 3
+    index: '2'
   RKUSBLoader:
     match:
-      ID_MODEL_ID: '350f'
+      ID_MODEL_ID: '350a'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:4.2.2'
+
+rk3528-rock-2f:
+  RawSerialPort:
+    speed: 1500000
+    port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:4.3.2:1.0-port2'
+  LinkPiSmartHUBPowerPort:
+    match:
+      ID_SERIAL_SHORT: 'A10PHA5S'
+    index: '3'
+  RKUSBLoader:
+    match:
+      ID_MODEL_ID: '350c'
       ID_PATH: 'pci-0000:00:15.0-usb-0:4.1.3'
 
-rk3506b-lyra-pi:
+rk3506j-forge1:
   RawSerialPort:
     speed: 1500000
     port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:4.3.2:1.0-port3'
   LinkPiSmartHUBPowerPort:
     match:
-      ID_SERIAL_SHORT: 'A10PHAU6'
-    index: 8
+      ID_SERIAL_SHORT: 'A10PHA5S'
+    index: '4'
   RKUSBLoader:
     match:
       ID_MODEL_ID: '350f'
-      ID_PATH: 'pci-0000:00:15.0-usb-0:3.1.1'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:4.1.4'
 
-rk3506-lyra-plus:
+rk3566-rock-3c:
   RawSerialPort:
     speed: 1500000
     port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:4.3.2:1.0-port4'
   LinkPiSmartHUBPowerPort:
     match:
-      ID_SERIAL_SHORT: 'A10PHAU6'
-    index: 7
+      ID_SERIAL_SHORT: 'A10PHA5S'
+    index: '5'
+  RKUSBLoader:
+    match:
+      ID_MODEL_ID: '350a'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:4.3.1'
+
+rk3506-lyra-plus:
+  RawSerialPort:
+    speed: 1500000
+    port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:4.3.2:1.0-port5'
+  LinkPiSmartHUBPowerPort:
+    match:
+      ID_SERIAL_SHORT: 'A10PHA5S'
+    index: '6'
   RKUSBLoader:
     match:
       ID_MODEL_ID: '350f'
-      ID_PATH: 'pci-0000:00:15.0-usb-0:3.3.1'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:4.3.3'
 
-rk3566-rock-3c:
+rk3328-rock-pi-e-v3:
   RawSerialPort:
     speed: 1500000
     port: '/dev/serial/by-path/pci-0000:00:15.0-usb-0:1.3.2:1.0-port0'
@@ -99,7 +164,7 @@ rk3566-rock-3c:
     index: '1'
   RKUSBLoader:
     match:
-      ID_MODEL_ID: '350a'
+      ID_MODEL_ID: '320c'
       ID_PATH: 'pci-0000:00:15.0-usb-0:1.2.1'
 
 rk3308-rock-s0:
@@ -177,5 +242,5 @@ rk3506b-lyra-ultra:
     index: '9'
   RKUSBLoader:
     match:
-      ID_MODEL_ID: '350a'
-      ID_PATH: 'pci-0000:00:15.0-usb-0:1.3.3'
+      ID_MODEL_ID: '350f'
+      ID_PATH: 'pci-0000:00:15.0-usb-0:1.1.2'
