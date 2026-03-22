@@ -22,6 +22,9 @@ if [[ -n $SOC && -f "$DEVICES_PATH/$SOC.conf" ]]; then
 fi
 eval $(confget -f "$DEVICES_PATH/$DEVICE.conf" -s labgrid -l -S)
 
-export LG_COORDINATOR LG_PLACE
+if [[ -n $LG_TEMPLATE ]]; then
+	LG_ENV="$SCRIPTS_PATH/labgrid/$LG_TEMPLATE"
+fi
+export LG_COORDINATOR LG_PLACE LG_ENV
 
-"$LABGRID_PATH/bin/labgrid-client" -c "$SCRIPTS_PATH/labgrid/$LG_TEMPLATE" ${ARGS:--v -s cycle con}
+"$LABGRID_PATH/bin/labgrid-client" ${ARGS:--v -s cycle con}
