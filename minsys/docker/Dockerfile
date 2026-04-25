@@ -1,4 +1,4 @@
-FROM ubuntu:noble AS base
+FROM ubuntu:resolute AS base
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -29,7 +29,7 @@ RUN apt-get update && apt-get install -y \
     flex \
     git \
     libncurses5-dev \
-    libpython3.12-dev \
+    libpython3.14-dev \
     libssl-dev \
     openssl \
     pip \
