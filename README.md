@@ -37,6 +37,8 @@ sudo apt install confget mtools
 ### u-boot
 
 ```
+ln -s ~/scripts/u-boot/RK3538MINIALL-ramboot.ini
+ln -s ~/scripts/u-boot/RK3572MINIALL-ramboot.ini
 pushd board/rockchip
 ln -s ~/scripts/u-boot/board/rockchip/rockchip-pxeboot.config
 ln -s ~/scripts/u-boot/board/rockchip/rockchip-usbpxeboot.config

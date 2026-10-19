@@ -63,10 +63,15 @@ elif [[ -f u-boot.dtb ]]; then
 	python3 "$SCRIPTS_PATH/u-boot/checkdtb.py" u-boot.dtb
 fi
 
+if [[ -n $BOOT_MERGER && -f "$BOOT_MERGER" ]]; then
+	../rkbin/tools/boot_merger "$BOOT_MERGER"
+fi
+
 if [[ -d /srv/u-boot ]]; then
 	mkdir -p "/srv/u-boot/$DEVICE/"
 	cp -v u-boot-rockchip*.bin "/srv/u-boot/$DEVICE/" || :
-elif [[ -f u-boot-rockchip.bin ]]; then
+fi
+if [[ -f u-boot-rockchip.bin ]]; then
 	dd if=/dev/zero of=uefi.img bs=1M count=128 conv=fsync
 	mkfs.vfat uefi.img -F 32
 	mmd -i uefi.img ::/EFI
@@ -76,6 +81,9 @@ elif [[ -f u-boot-rockchip.bin ]]; then
 		mcopy -i uefi.img u-boot-rockchip-spi.bin ::/
 	fi
 	mcopy -i uefi.img idbloader.img ::/
+	if [[ -f u-boot-rockchip-idblock.bin ]]; then
+		mcopy -i uefi.img u-boot-rockchip-idblock.bin ::/
+	fi
 	if [[ -f u-boot.itb ]]; then
 		mcopy -i uefi.img u-boot.itb ::/
 	elif [[ -f u-boot.img ]]; then
@@ -88,5 +96,8 @@ elif [[ -f u-boot-rockchip.bin ]]; then
 	parted -s boot.img set 1 legacy_boot on
 	dd if=uefi.img of=boot.img bs=1M seek=16 conv=fsync,notrunc
 	dd if=u-boot-rockchip.bin of=boot.img bs=32k seek=1 conv=fsync,notrunc
+	if [[ -f u-boot-rockchip-idblock.bin ]]; then
+		dd if=u-boot-rockchip-idblock.bin of=boot.img bs=32k seek=1 conv=fsync,notrunc
+	fi
 	gzip boot.img -f
 fi
